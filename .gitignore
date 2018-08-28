@@ -1,0 +1,13 @@
+back/java/target/
+back/java/src/main/resources/application.yml
+front/web-angular/node_modules/
+front/web-angular/dist/
+front/ionic/campusbase/node_modules
+front/ionic/campusbase/dist
+front/ionic/campusbase/www
+front/ionic/campusbase/.sourcemaps
+front/ionic/campusbase/.tmp
+front/ionic/campusbase/platforms
+front/ionic/campusbase/plugins
+front/ionic/google-play
+
