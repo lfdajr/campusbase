@@ -1,0 +1,131 @@
+<div *ngIf="tipo == tipoMenuType.LISTAGEM_TURMAS" >
+    <h3 class="page-title mb-5">Início</h3>
+    <div>
+      <div class="list-group list-group-transparent mb-0">
+        <a [routerLink]="['/turma/nova']" class="list-group-item list-group-item-action d-flex align-items-center active">
+          <span class="icon mr-3">
+            <i class="fe fe-inbox"></i>
+          </span>Nova turma
+          <span class="ml-auto badge badge-primary">14</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+          <span class="icon mr-3">
+            <i class="fe fe-send"></i>
+          </span>Novo Arquivo
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+            <span class="icon mr-3">
+              <i class="fe fe-send"></i>
+            </span>Copiar Turma
+          </a>
+      </div>
+      <div class="mt-6">
+        <a href="#" class="btn btn-secondary btn-block">Criar nova turma</a>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="tipo == tipoMenuType.DETALHE_TURMA" >
+    <h3 class="page-title mb-5">Criar novo(a)...</h3>
+    <div>
+      <div class="list-group list-group-transparent mb-0">
+        <a [routerLink]="['/turma', cursoId, 'aula', 'nova']" class="list-group-item list-group-item-action d-flex align-items-center active">
+          <span class="icon mr-3">
+            <i class="fe fe-inbox"></i>
+          </span>Aula
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+          <span class="icon mr-3">
+            <i class="fe fe-send"></i>
+          </span>Arquivo
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+            <span class="icon mr-3">
+              <i class="fe fe-send"></i>
+            </span>Trabalho
+          </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+            <span class="icon mr-3">
+              <i class="fe fe-send"></i>
+            </span>Material de Apoio
+          </a>
+      </div>
+      <div class="mt-6">
+        <a href="#" class="btn btn-secondary btn-block" title="Configurações da Turma"><i class="fe fe-send"></i> Configurações</a>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="tipo == tipoMenuType.AULA" >
+      <h3 class="page-title mb-5">Menu</h3>
+      <div>
+        <div class="list-group list-group-transparent mb-0">
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                <span class="icon mr-3">
+                  <i class="fe fe-send"></i>
+                </span><label for="inputId">Novo Arquivo</label>
+              </a>
+              <input id="inputId" type="file" ng2FileSelect [uploader]="upload" multiple (onFileSelected)="fileAdded($event)" style="position: fixed; top: -100em"/>
+              <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                  <span class="icon mr-3">
+                    <i class="fe fe-send"></i>
+                  </span>Enviar Link
+              </a>
+        </div>
+      </div>
+    </div>
+  
+  <div *ngIf="tipo == tipoMenuType.NOVA_TURMA" >
+    <h3 class="page-title mb-5">Início (NT)</h3>
+    <div>
+      <div class="list-group list-group-transparent mb-0">
+        <a [routerLink]="['/turma/nova']" class="list-group-item list-group-item-action d-flex align-items-center active">
+          <span class="icon mr-3">
+            <i class="fe fe-inbox"></i>
+          </span>Nova turma
+          <span class="ml-auto badge badge-primary">14</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+          <span class="icon mr-3">
+            <i class="fe fe-send"></i>
+          </span>Novo Arquivo
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+            <span class="icon mr-3">
+              <i class="fe fe-send"></i>
+            </span>Copiar Turma
+          </a>
+      </div>
+      <div class="mt-6">
+        <a href="#" class="btn btn-secondary btn-block">Criar nova turma</a>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="tipo == tipoMenuType.NOVA_AULA" >
+    <h3 class="page-title mb-5">Início (NT)</h3>
+    <div>
+      <div class="list-group list-group-transparent mb-0">
+        <a [routerLink]="['/turma/nova']" class="list-group-item list-group-item-action d-flex align-items-center active">
+          <span class="icon mr-3">
+            <i class="fe fe-inbox"></i>
+          </span>Nova turma
+          <span class="ml-auto badge badge-primary">14</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+          <span class="icon mr-3">
+            <i class="fe fe-send"></i>
+          </span>Novo Arquivo
+        </a>
+        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+            <span class="icon mr-3">
+              <i class="fe fe-send"></i>
+            </span>Copiar Turma
+          </a>
+      </div>
+      <div class="mt-6">
+        <a href="#" class="btn btn-secondary btn-block">Criar nova turma</a>
+      </div>
+    </div>
+  </div>
+  

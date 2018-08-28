@@ -1,0 +1,7 @@
+{
+  "name": "campusbase",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

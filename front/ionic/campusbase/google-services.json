@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "115405458532",
+    "firebase_url": "https://campusbase-69011.firebaseio.com",
+    "project_id": "campusbase-69011",
+    "storage_bucket": "campusbase-69011.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115405458532:android:203e0a2633194ad4",
+        "android_client_info": {
+          "package_name": "br.com.campusbase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "115405458532-tpqejrpvi3ak5u4tdv3ebr975k4fkae2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4t_TD83QlJ9Q2D5KU8w_NpwkbpEqXUtI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,7 @@
+<div class="row row-cards row-deck">
+  <context-menu [tipo]="tipo" class="col-md-2" [upload]="uploader" (onFileAdded)="fileAdded($event)"></context-menu>
+
+  <div class="col-md-9">
+    <aula-detalhe [aula]=aula [curso]=curso></aula-detalhe>
+  </div>
+</div>

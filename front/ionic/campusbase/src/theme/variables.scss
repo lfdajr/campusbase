@@ -1,0 +1,65 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+@import "ionic.globals";
+
+$colors: (
+  primary:    #75bee9,
+  secondary:  #7cc59a,
+  danger:     #f53d3d,
+  light:      #d15b57,
+  dark:       #484b49,
+  favorite:   #69BB7B,
+  header_background: white,
+  PENDENTE: #AC282B,
+  CONFIRMADO: #7cc59a,
+  
+  
+);
+
+$toolbar-md-background: color($colors, header_background);
+$toolbar-md-active-color: red;
+$text-color: #323533;
+$toolbar-md-title-text-color: black;
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+@import "ionic.ionicons";
+
+// Fonts
+// --------------------------------------------------
+// Roboto font is used by default for Material Design. Noto sans
+// is used by default for Windows.
+
+@import "roboto";
+@import "noto-sans";
+
+@import 'gradient-mixins';

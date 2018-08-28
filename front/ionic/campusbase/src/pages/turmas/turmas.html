@@ -1,0 +1,91 @@
+ <ion-header>
+  <ion-navbar no-border-bottom transparent>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Minhas Turmas</ion-title>
+
+    <!-- <ion-segment [(ngModel)]="segment" (ionChange)="updateSchedule()">
+      <ion-segment-button value="all">
+        Minhas Turmas
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        Concluídas
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentFilter()">
+        <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>
+      </button>
+    </ion-buttons>  -->
+  </ion-navbar>
+
+  <!-- <ion-toolbar no-border-top>
+    <ion-searchbar color="primary" [(ngModel)]="queryText" (ionInput)="updateSchedule()" placeholder="Search">
+    </ion-searchbar>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content>
+
+    <ng-container *ngIf="spinnerOn == false && matriculas.length == 0">
+        <ion-label padding class="teste">Oops! Não encontramos nenhuma turma. Com o código da 
+          turma você pode matricular-se na(s) turma(s) desejada(s).</ion-label>
+    </ng-container>
+
+    <ng-container *ngIf="spinnerOn == true">
+        <ion-label padding text-center><ion-spinner ></ion-spinner></ion-label>
+    </ng-container>
+
+  <!-- <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher> -->
+
+  <ion-list #scheduleList *ngIf="matriculas.length > 0">
+    <ion-item-divider sticky>
+      <ion-label>
+        Turmas Matriculadas
+      </ion-label>
+    </ion-item-divider>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <ion-item-group *ngFor="let m of matriculas">
+
+      <ion-item-sliding #slidingItem  [attr.track]="m.situacao" transparent>
+
+        <button *ngIf="m.situacao !== 'PENDENTE'" ion-item (click)="goToSessionDetail(m)">
+          <h3>{{m.curso.titulo}}</h3> <ion-badge *ngIf="m.showNovidade" item-end><ion-icon name="star"></ion-icon></ion-badge>
+          <p>Prof(a). {{m.curso.professor.nomeCompleto}}</p>
+        </button>
+        <button *ngIf="m.situacao === 'PENDENTE'" ion-item (click)="aguardandoMatricula()">
+          <h3>{{m.curso.titulo}}</h3>
+          <p>Prof(a). {{m.curso.professor.nomeCompleto}}</p>
+        </button>
+
+        <ion-item-options>
+          <button ion-button color="Sair" *ngIf="segment === 'all'">
+            Sair
+          </button>
+          <button ion-button color="Sair" *ngIf="segment === 'favorites'">
+            Sair
+          </button>
+        </ion-item-options>
+
+      </ion-item-sliding>
+
+    </ion-item-group>
+
+  </ion-list>
+
+  <ion-fab top right #fab >
+    <button ion-fab  (click)="matricularTurma()" mini>
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+
+</ion-content>

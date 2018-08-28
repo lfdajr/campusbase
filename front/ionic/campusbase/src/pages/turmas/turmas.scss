@@ -1,0 +1,26 @@
+@function auxiliary-categories() {
+  @return map-remove($colors);
+}
+
+turmas {
+  @each $track, $value in auxiliary-categories() {
+   ion-item-sliding[track=#{$track}] ion-label {
+     border-left: 2px solid $value;
+     padding-left: 10px;
+   }
+  }
+
+  ion-header {
+    background-image: url(../assets/img/9.png);
+    background-size: cover;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    height: 140px;
+  }
+
+  .teste {
+    word-wrap: break-word;
+    white-space: unset;
+    
+  }
+}

@@ -1,0 +1,87 @@
+<!-- <ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>Login</ion-title>
+	</ion-navbar>
+</ion-header> -->
+
+<!-- <ion-content>
+	<div class="logo">
+		<img src="assets/img/appicon.svg" alt="CampusBase logo">
+	</div>
+
+	<form #loginForm="ngForm" novalidate>
+		<ion-list >
+			<ion-item no-border>
+				<ion-label stacked color="primary">Email</ion-label>
+				<ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
+					required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+				Email é obrigatório
+			</p>
+
+			<ion-item no-border>
+				<ion-label stacked color="primary">Senha</ion-label>
+				<ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+				Senha é obrigatória
+			</p>
+		</ion-list>
+
+		<div padding>
+			<button ion-button block (click)="onLogin(loginForm)" type="submit">Entrar</button>
+			<br/>
+			<button ion-button block (click)="onSignup()" color="light" block>Cadastrar</button>
+		</div>
+	</form>
+
+</ion-content> -->
+
+
+<ion-content padding class="transparent-header" [ngStyle]="{'background-image': 'url(assets/img/background-4.jpg)'}">
+
+	<form #loginForm="ngForm" novalidate>
+		<div padding>
+			<ion-row>
+				<ion-col>
+					<img class="logo" src="assets/img/appicon.svg" />
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+
+					<ion-list inset class="no-border">
+						<ion-item>
+							<ion-label>Email</ion-label>
+							<ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
+							 required></ion-input>
+						</ion-item>
+						<ion-item>
+							<ion-label>Senha</ion-label>
+							<ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required></ion-input>
+						</ion-item>
+					</ion-list> 
+
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<button ion-button class="login-button" (click)="onLogin(loginForm)" type="submit">Entrar no Campus</button>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<div (click)="onSignup()">
+						<span>Criar uma nova conta.</span>
+					</div>
+				</ion-col>
+			</ion-row>
+		</div>
+	</form>
+</ion-content>

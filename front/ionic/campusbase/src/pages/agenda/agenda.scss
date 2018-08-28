@@ -1,0 +1,27 @@
+$coresTipoEvento : (
+  EVENTO: blue,
+  PROVA: red,
+  TRABALHO: red,
+  EXERCICIO: #7cc59a,
+  TREINAMENTO: #7cc59a,
+  AULA: #7cc59a,
+  OUTRO: #7cc59a
+);
+
+agenda {
+
+  @each $track, $value in $coresTipoEvento {
+    ion-item-sliding[track=#{$track}] ion-label {
+      border-left: 2px solid $value;
+      padding-left: 10px;
+    }
+   }
+    ion-header {
+        background-image: url(../assets/img/bkg_05_may.jpg);
+        background-size: cover;
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        height: 140px;
+      }
+      
+    }

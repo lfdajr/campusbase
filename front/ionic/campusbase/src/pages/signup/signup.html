@@ -1,0 +1,43 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Novo Usuário</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<form #signupForm="ngForm" novalidate>
+		<ion-list>
+			<ion-item>
+				<ion-label stacked color="primary">Nome</ion-label>
+				<ion-input [(ngModel)]="usuario.nome" name="nome" type="text" #nome="ngModel" required></ion-input>
+			</ion-item>
+			<p ion-text [hidden]="nome.valid || submitted == false" color="danger" padding-left>
+				Nome do usuário é um campo obrigatório
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="primary">Email</ion-label>
+				<ion-input [(ngModel)]="usuario.email" name="email" #email="ngModel" type="email" required></ion-input>
+			</ion-item>
+			<p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>
+				Email é um campo obrigatório
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="primary">Senha</ion-label>
+				<ion-input [(ngModel)]="usuario.senha" name="password" #senha="ngModel" type="password" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="senha.valid || submitted == false" color="danger" padding-left>
+				Senha é obrigatória
+			</p>
+		</ion-list>
+
+		<div padding>
+			<button ion-button (click)="onSignup(signupForm)" type="submit" block>Criar usuário</button>
+		</div>
+	</form>
+</ion-content>
